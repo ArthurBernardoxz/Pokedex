@@ -1,0 +1,51 @@
+html{
+    background-color: #fac314;
+    justify-content: center;
+    text-align: center;
+}
+
+#conteudo {
+    text-align: center  ;
+    background-color: white;
+    margin-top: 20px;
+    width:500px;
+    height: 650px;
+    border-color: #2a278f;
+    border-style: solid;
+    border-radius: 5px;
+    margin-left: 680px;
+}
+
+hr {
+    border-color: #2a278f;
+}
+
+#busca {
+    padding-top: 35px;
+}
+
+#barra_pesq {
+    border-color: #2a278f;
+    border-radius: 5px;
+    width: 400px;
+    height: 35px;
+    font-size: 20px;
+    font-weight: bold;
+    color:#2a278f;
+}
+
+#botao_encontrar {
+    background-color: #2a278f;
+    color: white;
+    border-radius: 3px;
+    margin-left: 8px;
+    height: 40px;
+    font-size: 18px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+button:hover {
+    transform: scale(1.1);
+    transition: all 0.5s ease-in
+  }
