@@ -13,7 +13,8 @@ html{
     border-color: #2a278f;
     border-style: solid;
     border-radius: 5px;
-    margin-left: 680px;
+    position: absolute;
+    left:36.5%;
 }
 
 hr {
