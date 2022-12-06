@@ -2,25 +2,26 @@ const URLbase = 'https://pokeapi.co/api/v2/pokemon/';
 
 var pokeName, pokemon, card;
 
-input_nome = document.getElementById("barra_pesq");
-botao_encontrar = document.getElementById("botao_encontrar");
+let input_nome = document.getElementById("barra_pesq");
+let botao_encontrar = document.getElementById("botao_encontrar");
 
 botao_encontrar.addEventListener('click', encontrar);
 
 // var's do container
-nome_pokemon = document.getElementById('Nome');
-numero_pokemon = document.getElementById('Numero');
-tipo_pokemon = document.getElementById('Tipo');
-habilidades_pokemon = document.getElementById('Habilidades');
-peso_pokemon = document.getElementById('Peso');
-altura_pokemon = document.getElementById('Altura');
-img_pokemon = document.getElementById('img_pokemon');
+const nome_pokemon = document.getElementById('Nome');
+const numero_pokemon = document.getElementById('Numero');
+const tipo_pokemon = document.getElementById('Tipo');
+const habilidades_pokemon = document.getElementById('Habilidades');
+const peso_pokemon = document.getElementById('Peso');
+const altura_pokemon = document.getElementById('Altura');
+const img_pokemon = document.getElementById('img_pokemon');
 
 
 function requestPokeInfo(url, name) {  
     tipo_pokemon.innerHTML = '';
     habilidades_pokemon.innerHTML = '';
-  fetch(url + name)
+    
+    fetch(url + name)
     .then(response => response.json())
     .then(data => {
       pokemon = data;
@@ -45,6 +46,7 @@ function criarCard() {
     for(i = 0; i < pokemon.types.length; i++){
         tipo_pokemon.innerHTML = tipo_pokemon.innerHTML + ', ' + pokemon.types[i].type.name;
     }
+
     for(i = 0; i < pokemon.abilities.length; i++){
         habilidades_pokemon.innerHTML = habilidades_pokemon.innerHTML + ', ' + pokemon.abilities[i].ability.name;
     }
